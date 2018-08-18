@@ -28,7 +28,8 @@ before-script:
   - psql -c 'create database test_db;' -U postgres
 
 install:
-  - "pip install -r requirements.txt"
+  - pip install -r requirements.txt
+  - pip install coverage
   
 script: 
   - coverage run -m unittest discover && coverage report
